@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maynards Candy</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="./images/maynards-logo.png" type="image/png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="./images/maynards-logo.png" alt="Maynards Logo" height="80"/></a>
+    <h1>Maynards Candy</h1>
+    <nav>
+      <ul>
+        <li><a href="#intro">About</a></li>
+        <li><a href="#flavors">Flavors</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#locations">Locations</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="intro">
+      <h2>Sweet Moments with Maynards</h2>
+      <p>Maynards is known for creating some of the most playful and flavorful candies in the world. From classic Wine Gums to juicy Sour Patch Kids, every bite is a burst of fun. Perfect for movie nights, parties, or just a personal treat!</p>
+      <p>Maynards offers an experience that’s not just about candy, but about sharing memories with those around you. Whether you're indulging in a sweet candy party or giving a gift to a loved one, Maynards makes sure that every candy is packed with joy.</p>
+    </section>
+
+    <!-- History Section -->
+<section id="history">
+    <h2>The History of Maynards Candy</h2>
+    <img src="images/history.jpeg" alt="Maynards History" class="history-img">
+    <p>Founded in the early 1900s, Maynards has evolved into one of the most beloved candy brands worldwide. Originally starting as a small confectionery business in Canada, the brand soon expanded to international markets, becoming synonymous with fun, flavor, and quality. Maynards is proud to maintain a tradition of deliciously fun candies with quality ingredients.</p>
+    <p>Throughout its journey, Maynards has been at the forefront of candy innovation, introducing new flavors, textures, and experiences. With a focus on creating unique and playful candies, Maynards has continued to bring smiles to faces of all ages.</p>
+  </section>
+  
+
+    <!-- Flavors Section -->
+    <section id="flavors">
+      <h2>Top Maynards Flavors</h2>
+      <p>Maynards candies come in a wide range of vibrant and playful flavors. Here’s a list of some of our most popular options:</p>
+      <ul>
+        <li><strong>Swedish Candy</strong>: A chewy, fruity candy with a mix of delightful flavors in various shapes.</li>
+        <li><strong>Swedish Cream</strong>: A smooth and creamy delight, perfect for fans of vanilla and caramel.</li>
+        <li><strong>Fizzyfish Jellies</strong>: A fun, tangy, and fizzy candy shaped like fish.</li>
+        <li><strong>Fuzzy Peach</strong>: A peach-flavored gummy with a sugary coating.</li>
+        <li><strong>Cherry Blasters</strong>: Sweet and tart cherry-flavored jellies with a punch.</li>
+        <li><strong>Gummy Bears</strong>: Classic fruity bears loved by all ages.</li>
+        <li><strong>Juicy Squirts</strong>: Sour candy that releases a juicy, sweet filling.</li>
+        <li><strong>Jujubes</strong>: A chewy, multi-flavored candy with a slightly tart kick.</li>
+      </ul>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2>Candy Gallery</h2>
+      <p>Take a closer look at the colorful, fun world of Maynards candy. These images showcase the variety of flavors and vibrant candy designs that we offer!</p>
+      <div class="image-gallery">
+        <img src="./images/maynards1.jpeg" alt="Swedish Candy" onclick="showDetails('swedishCandy')"/>
+        <img src="./images/maynards2.jpeg" alt="Swedish Cream" onclick="showDetails('swedishCream')"/>
+        <img src="./images/maynards3.jpeg" alt="Fizzyfish Jellies" onclick="showDetails('fizzyfish')"/>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Maynards</h2>
+      <p>Have questions or want to get in touch? Fill out the form below and we will be happy to assist you!</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Locations Section -->
+    <section id="locations">
+      <h2>Where to Find Maynards Candy</h2>
+      <p>Maynards candies are available worldwide! Find your nearest store or online retailer:</p>
+      <ul>
+        <li>North America: Available at most major grocery stores and online.</li>
+        <li>Europe: Find us in supermarkets, candy shops, and online stores.</li>
+        <li>Asia & Australia: We're available through online platforms, and selected retail locations.</li>
+      </ul>
+      <p>For a list of stores near you, visit our <a href="https://www.maynardscandy.com/store-locator" target="_blank">store locator</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p>&copy; 2025 Maynards Candy. All rights reserved.</p>
+      <p>Visit us: <a href="https://www.maynardscandy.com" target="_blank">www.maynardscandy.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="candyName">Candy Name</h3>
+      <img id="candyImage" src="" alt="Candy Image" style="width: 100%; border-radius: 10px;"/>
+      <p id="candyDescription">Candy description will appear here.</p>
+    </div>
+  </div>
+
+  <script>
+    const candyInfo = {
+      swedishCandy: {
+        name: "Swedish Candy",
+        description: "A mix of chewy, fruity candies that come in various shapes and flavors, commonly known for their sweet and tangy taste. Perfect for candy lovers who enjoy a variety of fruity options.",
+        image: "./images/maynards1.jpeg"
+      },
+      swedishCream: {
+        name: "Swedish Cream",
+        description: "Soft, creamy, and smooth candies with a hint of vanilla and caramel. These are perfect for those who love a milder, more indulgent sweet treat.",
+        image: "./images/maynards2.jpeg"
+      },
+      fizzyfish: {
+        name: "Fizzyfish Jellies",
+        description: "Tart and tangy fish-shaped jellies that provide a fizzy sensation with every bite. A fun treat for those who like their candy with a twist of excitement.",
+        image: "./images/maynards3.jpeg"
+      }
+    };
+
+    function showDetails(type) {
+      const modal = document.getElementById("myModal");
+      document.getElementById("candyName").textContent = candyInfo[type].name;
+      document.getElementById("candyDescription").textContent = candyInfo[type].description;
+      document.getElementById("candyImage").src = candyInfo[type].image;
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    // Close modal if user clicks outside
+    window.onclick = function(event) {
+      const modal = document.getElementById("myModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+  </script>
+</body>
+</html>
